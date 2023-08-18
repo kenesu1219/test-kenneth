@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.11.4 on win32)" generated="20230818 09:39:32.543" rpa="false">
+<suite id="s1" name="Qa" source="C:\Users\Kenesu\Desktop\qa">
+<suite id="s1-s1" name="Test" source="C:\Users\Kenesu\Desktop\qa\test">
+<suite id="s1-s1-s1" name="Acceptance-Test" source="C:\Users\Kenesu\Desktop\qa\test\acceptance-test">
+<suite id="s1-s1-s1-s1" name="Script" source="C:\Users\Kenesu\Desktop\qa\test\acceptance-test\script">
+<suite id="s1-s1-s1-s1-s1" name="1 Payment Scenario" source="C:\Users\Kenesu\Desktop\qa\test\acceptance-test\script\1_payment_scenario">
+<suite id="s1-s1-s1-s1-s1-s1" name="Resources" source="C:\Users\Kenesu\Desktop\qa\test\acceptance-test\script\1_payment_scenario\resources">
+<suite id="s1-s1-s1-s1-s1-s1-s1" name="1 Payment Scenario Main" source="C:\Users\Kenesu\Desktop\qa\test\acceptance-test\script\1_payment_scenario\resources\1_payment_scenario_main.robot">
+<test id="s1-s1-s1-s1-s1-s1-s1-t1" name="01_Payment using Credit Card Fails">
+<kw name="Given that consumer will apply for a promo for 7 days" library="1_payment_scenario_setup">
+<arguments>
+<arg>dev</arg>
+<arg>chrome</arg>
+</arguments>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${env}</arg>
+</arguments>
+<msg timestamp="20230818 09:39:32.934" level="INFO">${env} = dev</msg>
+<status status="PASS" starttime="20230818 09:39:32.933" endtime="20230818 09:39:32.934"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20230818 09:39:32.936" level="INFO">${browser} = chrome</msg>
+<status status="PASS" starttime="20230818 09:39:32.935" endtime="20230818 09:39:32.936"></status>
+</kw>
+<kw name="Access Website" library="1_payment_scenario_setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${${env}_env}</arg>
+<arg>${${browser}}</arg>
+</arguments>
+<msg timestamp="20230818 09:39:32.938" level="INFO">Opening browser 'chrome' to base url 'https://www.amaysim.com.au/'.</msg>
+<status status="PASS" starttime="20230818 09:39:32.937" endtime="20230818 09:39:48.458"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230818 09:39:48.459" endtime="20230818 09:39:48.724"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:39:53.726" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:39:48.725" endtime="20230818 09:39:53.726"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:39:32.936" endtime="20230818 09:39:53.726"></status>
+</kw>
+<kw name="Navigate to SIM Plans Menu" library="1_payment_scenario_setup">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${home_simplans_navbar}</arg>
+</arguments>
+<msg timestamp="20230818 09:39:53.727" level="INFO">Simulating Mouse Over on element '//a[@href="/sim-plans"]'.</msg>
+<status status="PASS" starttime="20230818 09:39:53.727" endtime="20230818 09:39:54.031"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:39:59.032" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:39:54.031" endtime="20230818 09:39:59.032"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:39:53.727" endtime="20230818 09:39:59.032"></status>
+</kw>
+<kw name="Navigate to 7 DAY SIM Plans page" library="1_payment_scenario_setup">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${simplans_7days_option}</arg>
+</arguments>
+<msg timestamp="20230818 09:39:59.076" level="INFO">Clicking element '//a[@href="/sim-plans/7-day-sim-plans"]'.</msg>
+<status status="PASS" starttime="20230818 09:39:59.076" endtime="20230818 09:39:59.189"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:40:04.189" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:39:59.189" endtime="20230818 09:40:04.189"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${7Days_simPlan_header}</arg>
+<arg>${assertion_7Days_page}</arg>
+</arguments>
+<msg timestamp="20230818 09:40:04.190" level="INFO">Verifying element '//div[@class="plan-table-heading"]' contains exact text '7 DAY SIM PLANS'.</msg>
+<status status="PASS" starttime="20230818 09:40:04.189" endtime="20230818 09:40:04.219"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:40:09.220" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:40:04.219" endtime="20230818 09:40:09.220"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${7Days_buyNow_button}</arg>
+</arguments>
+<status status="PASS" starttime="20230818 09:40:09.220" endtime="20230818 09:40:09.510"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:40:14.512" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:40:09.511" endtime="20230818 09:40:14.512"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${7Days_buyNow_button}</arg>
+</arguments>
+<msg timestamp="20230818 09:40:14.535" level="INFO">Clicking element '//a[@href="/mobile/cart/7-day-10gb"]'.</msg>
+<status status="PASS" starttime="20230818 09:40:14.512" endtime="20230818 09:40:14.686"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>30</arg>
+</arguments>
+<msg timestamp="20230818 09:40:44.688" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20230818 09:40:14.686" endtime="20230818 09:40:44.688"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:39:59.033" endtime="20230818 09:40:44.688"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:39:32.932" endtime="20230818 09:40:44.689"></status>
+</kw>
+<kw name="And consumer provided personal information" library="1_payment_scenario_setup">
+<kw name="Pick a new number with a suggested number" library="1_payment_scenario_setup">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${simDetails_newNumber_option}</arg>
+</arguments>
+<msg timestamp="20230818 09:40:44.690" level="INFO">Clicking element '//label[@class="css-14b8rqd"]'.</msg>
+<status status="PASS" starttime="20230818 09:40:44.690" endtime="20230818 09:40:44.831"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:40:49.833" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:40:44.831" endtime="20230818 09:40:49.833"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${simDetails_actualNumber_option}</arg>
+</arguments>
+<msg timestamp="20230818 09:40:49.835" level="INFO">Clicking element '//span[@class="css-y5ibac"]'.</msg>
+<status status="PASS" starttime="20230818 09:40:49.834" endtime="20230818 09:40:49.969"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:40:54.971" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:40:49.969" endtime="20230818 09:40:54.971"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:40:44.690" endtime="20230818 09:40:54.972"></status>
+</kw>
+<kw name="Choose Physical type of Sim" library="1_payment_scenario_setup">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${simDetails_physicalSim_option}</arg>
+</arguments>
+<status status="PASS" starttime="20230818 09:40:54.973" endtime="20230818 09:40:55.276"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${simDetails_physicalSim_option}</arg>
+</arguments>
+<msg timestamp="20230818 09:40:55.277" level="INFO">Clicking element '//div[@class="css-1vy9u2m"]'.</msg>
+<status status="PASS" starttime="20230818 09:40:55.276" endtime="20230818 09:40:55.380"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:41:00.382" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:40:55.381" endtime="20230818 09:41:00.382"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${simDetails_checkout_button}</arg>
+</arguments>
+<status status="PASS" starttime="20230818 09:41:00.383" endtime="20230818 09:41:00.716"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${simDetails_checkout_button}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:00.717" level="INFO">Clicking element '//span[@class="css-1tisfka"]'.</msg>
+<status status="PASS" starttime="20230818 09:41:00.716" endtime="20230818 09:41:01.020"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:41:06.022" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:41:01.021" endtime="20230818 09:41:06.022"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:40:54.972" endtime="20230818 09:41:06.022"></status>
+</kw>
+<kw name="Select New Customer" library="1_payment_scenario_setup">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${customerDetails_newCusomter_option}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:06.024" level="INFO">Clicking element '//div[@class="css-1ohxdt3"]'.</msg>
+<status status="PASS" starttime="20230818 09:41:06.023" endtime="20230818 09:41:07.584"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:41:12.586" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:41:07.584" endtime="20230818 09:41:12.586"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:41:06.023" endtime="20230818 09:41:12.586"></status>
+</kw>
+<kw name="Provided Personal Information" library="1_payment_scenario_setup">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${customerDetails_firstName_input}</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:12.587" level="INFO">Typing text 'Test' into text field '//input[@name="firstName"]'.</msg>
+<status status="PASS" starttime="20230818 09:41:12.587" endtime="20230818 09:41:12.808"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:41:17.811" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:41:12.809" endtime="20230818 09:41:17.811"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${customerDetails_lastName_input}</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:17.812" level="INFO">Typing text 'Test' into text field '//input[@name="lastName"]'.</msg>
+<status status="PASS" starttime="20230818 09:41:17.811" endtime="20230818 09:41:18.003"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:41:23.005" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:41:18.003" endtime="20230818 09:41:23.005"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${customerDetails_dateOfBirth_input}</arg>
+<arg>${dateOfBirth}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:23.006" level="INFO">Typing text '01/01/2001' into text field '//input[@name="dateOfBirth"]'.</msg>
+<status status="PASS" starttime="20230818 09:41:23.005" endtime="20230818 09:41:23.293"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:41:28.294" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:41:23.294" endtime="20230818 09:41:28.294"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${customerDetails_contactNumber_input}</arg>
+</arguments>
+<status status="PASS" starttime="20230818 09:41:28.294" endtime="20230818 09:41:28.603"></status>
+</kw>
+<kw name="Generate Unique Email" library="1_payment_scenario_setup">
+<kw name="Generate Random String Mixed" library="common">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomStr}</var>
+</assign>
+<msg timestamp="20230818 09:41:28.604" level="INFO">${randomStr} = Jtmupskd</msg>
+<status status="PASS" starttime="20230818 09:41:28.604" endtime="20230818 09:41:28.604"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${randomStr}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:28.605" level="INFO">${randomStr} = Jtmupskd</msg>
+<status status="PASS" starttime="20230818 09:41:28.604" endtime="20230818 09:41:28.605"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:41:28.603" endtime="20230818 09:41:28.605"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${randomStr}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:28.606" level="INFO">${randomStr} = Jtmupskd</msg>
+<status status="PASS" starttime="20230818 09:41:28.605" endtime="20230818 09:41:28.606"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${randomStr}${email}</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20230818 09:41:28.606" level="INFO">${email} = Jtmupskdtest@test.com</msg>
+<status status="PASS" starttime="20230818 09:41:28.606" endtime="20230818 09:41:28.607"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:28.607" level="INFO">${email} = Jtmupskdtest@test.com</msg>
+<status status="PASS" starttime="20230818 09:41:28.607" endtime="20230818 09:41:28.607"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:41:28.603" endtime="20230818 09:41:28.608"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${customerDetails_email_input}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:28.608" level="INFO">Typing text 'Jtmupskdtest@test.com' into text field '//input[@name="email"]'.</msg>
+<status status="PASS" starttime="20230818 09:41:28.608" endtime="20230818 09:41:28.995"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:41:33.997" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:41:28.996" endtime="20230818 09:41:33.997"></status>
+</kw>
+<kw name="Generate Unique Password" library="1_payment_scenario_setup">
+<kw name="Generate Random String Mixed" library="common">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${randomStr}</var>
+</assign>
+<msg timestamp="20230818 09:41:33.999" level="INFO">${randomStr} = 4HoiWZzD</msg>
+<status status="PASS" starttime="20230818 09:41:33.999" endtime="20230818 09:41:34.000"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${randomStr}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:34.000" level="INFO">${randomStr} = 4HoiWZzD</msg>
+<status status="PASS" starttime="20230818 09:41:34.000" endtime="20230818 09:41:34.001"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:41:33.998" endtime="20230818 09:41:34.001"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${randomStr}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:34.002" level="INFO">${randomStr} = 4HoiWZzD</msg>
+<status status="PASS" starttime="20230818 09:41:34.002" endtime="20230818 09:41:34.002"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${randomStr}${password}</arg>
+</arguments>
+<assign>
+<var>${password}</var>
+</assign>
+<msg timestamp="20230818 09:41:34.003" level="INFO">${password} = 4HoiWZzDtest123!@#</msg>
+<status status="PASS" starttime="20230818 09:41:34.003" endtime="20230818 09:41:34.003"></status>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:34.004" level="INFO">${password} = 4HoiWZzDtest123!@#</msg>
+<status status="PASS" starttime="20230818 09:41:34.004" endtime="20230818 09:41:34.005"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:41:33.997" endtime="20230818 09:41:34.005"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${customerDetails_password_input}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:34.006" level="INFO">Typing text '4HoiWZzDtest123!@#' into text field '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20230818 09:41:34.005" endtime="20230818 09:41:34.639"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:41:39.640" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:41:34.640" endtime="20230818 09:41:39.640"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${customerDetails_contactNumber_input}</arg>
+<arg>${contactNumber}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:39.641" level="INFO">Typing text '0412345678' into text field '//input[@name="contactNumber"]'.</msg>
+<status status="PASS" starttime="20230818 09:41:39.640" endtime="20230818 09:41:39.993"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:41:44.994" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:41:39.993" endtime="20230818 09:41:44.994"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${customerDetails_address_input}</arg>
+<arg>${address}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:44.995" level="INFO">Typing text 'Level 6, 17-19 Bridge St, SYDNEY NSW 2000' into text field '//input[@class="react-autosuggest__input"]'.</msg>
+<status status="PASS" starttime="20230818 09:41:44.994" endtime="20230818 09:41:45.829"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:41:50.830" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:41:45.829" endtime="20230818 09:41:50.830"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${customerDetails_billingAddSameAsAdd_checkbox}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:50.831" level="INFO">Clicking element '//*[@id="react-autowhatever-1--item-0"]/span'.</msg>
+<status status="PASS" starttime="20230818 09:41:50.830" endtime="20230818 09:41:50.930"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:41:55.933" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:41:50.931" endtime="20230818 09:41:55.933"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${customerDetails_acknowledgement_checkbox}</arg>
+</arguments>
+<status status="PASS" starttime="20230818 09:41:55.933" endtime="20230818 09:41:56.227"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${customerDetails_creditCardPayment_option}</arg>
+</arguments>
+<msg timestamp="20230818 09:41:56.228" level="INFO">Clicking element '//*[@id="__next"]/div[2]/div/div[1]/div/div/div[4]/div/fieldset/div/label[1]/div[1]'.</msg>
+<status status="PASS" starttime="20230818 09:41:56.228" endtime="20230818 09:41:56.301"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:42:01.302" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:41:56.302" endtime="20230818 09:42:01.302"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${customerDetails_acknowledgement_checkbox}</arg>
+</arguments>
+<msg timestamp="20230818 09:42:01.303" level="INFO">Clicking element '//*[@id="__next"]/div[2]/div/div[1]/div/div/div[5]/div/div[1]/label/div[1]'.</msg>
+<status status="PASS" starttime="20230818 09:42:01.302" endtime="20230818 09:42:01.391"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:42:06.394" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:42:01.392" endtime="20230818 09:42:06.394"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${customerDetails_continueToPayment_button}</arg>
+</arguments>
+<status status="PASS" starttime="20230818 09:42:06.394" endtime="20230818 09:42:06.703"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${customerDetails_continueToPayment_button}</arg>
+</arguments>
+<msg timestamp="20230818 09:42:06.705" level="INFO">Clicking element '//div[@class="css-arhuk1"]'.</msg>
+<status status="PASS" starttime="20230818 09:42:06.704" endtime="20230818 09:42:06.836"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>15</arg>
+</arguments>
+<msg timestamp="20230818 09:42:21.838" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20230818 09:42:06.837" endtime="20230818 09:42:21.838"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:41:12.586" endtime="20230818 09:42:21.838"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:40:44.689" endtime="20230818 09:42:21.839"></status>
+</kw>
+<kw name="When consumer provided invalid payment details" library="1_payment_scenario_setup">
+<kw name="Provided Card Information" library="1_payment_scenario_setup">
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${cardInfo_cardNumber_frame}</arg>
+</arguments>
+<msg timestamp="20230818 09:42:21.841" level="INFO">Selecting frame '//*[@id="__next"]/div[2]/div/div[1]/div/div[2]/div/div[1]/div[1]/div/div/iframe'.</msg>
+<status status="PASS" starttime="20230818 09:42:21.841" endtime="20230818 09:42:21.898"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${cardInfo_cardNumber_input}</arg>
+<arg>${cardNumber}</arg>
+</arguments>
+<msg timestamp="20230818 09:42:21.899" level="INFO">Typing text '4242 4242 4242 4242' into text field '//input[@name="cardnumber"]'.</msg>
+<status status="PASS" starttime="20230818 09:42:21.899" endtime="20230818 09:42:22.482"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230818 09:42:22.483" endtime="20230818 09:42:22.487"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:42:27.488" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:42:22.488" endtime="20230818 09:42:27.488"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${cardInfo_expiry_frame}</arg>
+</arguments>
+<msg timestamp="20230818 09:42:27.489" level="INFO">Selecting frame '//*[@id="__next"]/div[2]/div/div[1]/div/div[3]/div[1]/div/div/div[1]/div[1]/div/div/iframe'.</msg>
+<status status="PASS" starttime="20230818 09:42:27.488" endtime="20230818 09:42:27.543"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${cardInfo_expiry_input}</arg>
+<arg>${expiration}</arg>
+</arguments>
+<msg timestamp="20230818 09:42:27.544" level="INFO">Typing text '01/27' into text field '//input[@name="exp-date"]'.</msg>
+<status status="PASS" starttime="20230818 09:42:27.543" endtime="20230818 09:42:27.723"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230818 09:42:27.724" endtime="20230818 09:42:27.970"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:42:32.970" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:42:27.970" endtime="20230818 09:42:32.970"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${cardInfo_securityCode_frame}</arg>
+</arguments>
+<msg timestamp="20230818 09:42:32.971" level="INFO">Selecting frame '//*[@id="__next"]/div[2]/div/div[1]/div/div[3]/div[2]/div/div/div[1]/div[1]/div/div/iframe'.</msg>
+<status status="PASS" starttime="20230818 09:42:32.970" endtime="20230818 09:42:33.027"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${cardInfo_securityCode_input}</arg>
+<arg>${securityCode}</arg>
+</arguments>
+<msg timestamp="20230818 09:42:33.028" level="INFO">Typing text '123' into text field '//input[@name="cvc"]'.</msg>
+<status status="PASS" starttime="20230818 09:42:33.027" endtime="20230818 09:42:33.206"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:42:38.209" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:42:33.207" endtime="20230818 09:42:38.209"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230818 09:42:38.209" endtime="20230818 09:42:38.214"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${cardInfo_confirmation_checkbox}</arg>
+</arguments>
+<msg timestamp="20230818 09:42:38.215" level="INFO">Clicking element '//div[@class="css-1417z9a"]'.</msg>
+<status status="PASS" starttime="20230818 09:42:38.214" endtime="20230818 09:42:38.355"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230818 09:42:43.357" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230818 09:42:38.356" endtime="20230818 09:42:43.357"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${cardInfo_placeOrder_button}</arg>
+</arguments>
+<msg timestamp="20230818 09:42:43.358" level="INFO">Clicking element '//div[@class="css-arhuk1"]'.</msg>
+<status status="PASS" starttime="20230818 09:42:43.358" endtime="20230818 09:42:43.529"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>15</arg>
+</arguments>
+<msg timestamp="20230818 09:42:58.531" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20230818 09:42:43.530" endtime="20230818 09:42:58.531"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:42:21.840" endtime="20230818 09:42:58.531"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:42:21.839" endtime="20230818 09:42:58.532"></status>
+</kw>
+<kw name="Then payment fails" library="1_payment_scenario_setup">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${application_status_header}</arg>
+<arg>${assertion_failed}</arg>
+</arguments>
+<msg timestamp="20230818 09:42:58.579" level="INFO">Element '//div[@class="css-cqbrkr"]' contains text 'failed'.</msg>
+<status status="PASS" starttime="20230818 09:42:58.533" endtime="20230818 09:42:58.579"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:42:58.532" endtime="20230818 09:42:58.580"></status>
+</kw>
+<status status="PASS" starttime="20230818 09:39:32.930" endtime="20230818 09:42:58.580" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230818 09:39:32.630" endtime="20230818 09:42:58.581"></status>
+</suite>
+<status status="PASS" starttime="20230818 09:39:32.626" endtime="20230818 09:42:58.586"></status>
+</suite>
+<status status="PASS" starttime="20230818 09:39:32.623" endtime="20230818 09:42:58.589"></status>
+</suite>
+<status status="PASS" starttime="20230818 09:39:32.619" endtime="20230818 09:42:58.591"></status>
+</suite>
+<status status="PASS" starttime="20230818 09:39:32.615" endtime="20230818 09:42:58.595"></status>
+</suite>
+<status status="PASS" starttime="20230818 09:39:32.612" endtime="20230818 09:42:58.598"></status>
+</suite>
+<status status="PASS" starttime="20230818 09:39:32.585" endtime="20230818 09:42:58.601"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Qa">Qa</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Test">Qa.Test</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="Acceptance-Test">Qa.Test.Acceptance-Test</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1" name="Script">Qa.Test.Acceptance-Test.Script</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s1" name="1 Payment Scenario">Qa.Test.Acceptance-Test.Script.1 Payment Scenario</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s1-s1" name="Resources">Qa.Test.Acceptance-Test.Script.1 Payment Scenario.Resources</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s1-s1-s1" name="1 Payment Scenario Main">Qa.Test.Acceptance-Test.Script.1 Payment Scenario.Resources.1 Payment Scenario Main</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230818 09:39:32.922" level="ERROR">Error in file 'C:\Users\Kenesu\Desktop\qa\test\acceptance-test\script\1_payment_scenario\resources\1_payment_scenario_setup\1_payment_scenario_setup.robot' on line 5: Resource file '..\..\..\resources\common.robot' does not exist.</msg>
+<msg timestamp="20230818 09:39:32.923" level="ERROR">Error in file 'C:\Users\Kenesu\Desktop\qa\test\acceptance-test\script\1_payment_scenario\resources\1_payment_scenario_setup\1_payment_scenario_setup.robot' on line 6: Resource file 'test-data\test_data.robot' does not exist.</msg>
+</errors>
+</robot>
